@@ -1,4 +1,6 @@
-﻿namespace Controller.States
+﻿using Model.Services.ServiceLocator;
+
+namespace Controller.States
 {
     public class LoadDataState : State
     {
