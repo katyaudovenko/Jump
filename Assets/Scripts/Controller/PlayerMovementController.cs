@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using Model.PlayerComponents;
+using UnityEngine;
 
-namespace Model.PlayerComponents
+namespace Controller
 {
     public class PlayerMovementController : MonoBehaviour
     {
@@ -13,14 +14,8 @@ namespace Model.PlayerComponents
 
         private void Update()
         {
-            if (!Input.GetMouseButtonDown(0)) 
-                return;
-            
-            _jumpComponent.Jump();
-            
-            if (!_jumpComponent.IsProp) 
-                _jumpComponent.DoubleJump();
-
+            if (Input.GetMouseButtonDown(0)) 
+                _jumpComponent.Jump();
         }
         
         private void OnCollisionEnter2D(Collision2D col)

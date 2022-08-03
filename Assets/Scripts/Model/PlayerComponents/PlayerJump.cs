@@ -8,29 +8,41 @@ namespace Model.PlayerComponents
         
         [SerializeField] private float jumpForce;
 
-        public bool IsProp { get; private set; }
         private Rigidbody2D _rigidbody2D;
-
+        private bool _inJump;
+        private bool _isDoubleJump;
+        
         private void Awake() => 
             _rigidbody2D = GetComponent<Rigidbody2D>();
-        
+
         public void Jump()
         {
-            IsProp = false;
-            _rigidbody2D.velocity = (transform.right + Vector3.up).normalized * jumpForce;
-        }
+            if (!_inJump)
+            {
+                JumpInDirection();
+                _inJump = true;
+                return;
+            }
 
-        public void DoubleJump()
-        {
-            Jump();
-            transform.Rotate(0,180,0);
+            if (!_isDoubleJump)
+            {
+                transform.Rotate(0, 180, 0);
+                JumpInDirection();
+                _isDoubleJump = true;
+            }
         }
 
         public void StopJump()
         {
-            IsProp = true;
+            _inJump = false;
+            _isDoubleJump = false;
+            
             _rigidbody2D.velocity = Vector2.zero;
             _rigidbody2D.gravityScale = GravityScale;
+            transform.Rotate(0, 180, 0);
         }
+
+        private void JumpInDirection() => 
+            _rigidbody2D.velocity = (transform.right + Vector3.up).normalized * jumpForce;
     }
 }
