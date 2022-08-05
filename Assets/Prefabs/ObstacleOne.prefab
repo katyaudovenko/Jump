@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6861951513112905197}
   m_Layer: 0
   m_Name: commonWood
-  m_TagString: slidingZone
+  m_TagString: SlidingZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 6897940165394555294}
   m_Layer: 0
   m_Name: commonWood
-  m_TagString: slidingZone
+  m_TagString: SlidingZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,7 +125,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2958822704760267855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.68, y: 0, z: 0}
+  m_LocalPosition: {x: -2.97, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2958822705565328015}
@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 2958822705365918400}
   m_Layer: 0
   m_Name: thorns
-  m_TagString: spikes
+  m_TagString: Spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -318,7 +318,7 @@ GameObject:
   - component: {fileID: 5598359357123954431}
   m_Layer: 0
   m_Name: wood
-  m_TagString: slidingZone
+  m_TagString: SlidingZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -413,6 +413,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2958822705565328015}
+  - component: {fileID: 7441942368615631467}
   m_Layer: 0
   m_Name: ObstacleOne
   m_TagString: Untagged
@@ -438,3 +439,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7441942368615631467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2958822705565328008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b89298e82380407388444dd7a6cf1561, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

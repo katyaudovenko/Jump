@@ -4,9 +4,9 @@ namespace Model.PlayerComponents
 {
     public class PlayerJump : MonoBehaviour
     {
-        private const float GravityScale = 0.01f;
-        
         [SerializeField] private float jumpForce;
+        [SerializeField] private float jumpingGravity;
+        [SerializeField] private float slidingGravityScale;
 
         private Rigidbody2D _rigidbody2D;
         private bool _inJump;
@@ -38,11 +38,14 @@ namespace Model.PlayerComponents
             _isDoubleJump = false;
             
             _rigidbody2D.velocity = Vector2.zero;
-            _rigidbody2D.gravityScale = GravityScale;
+            _rigidbody2D.gravityScale = slidingGravityScale;
             transform.Rotate(0, 180, 0);
         }
 
-        private void JumpInDirection() => 
+        private void JumpInDirection()
+        {
             _rigidbody2D.velocity = (transform.right + Vector3.up).normalized * jumpForce;
+            _rigidbody2D.gravityScale = jumpingGravity;
+        }
     }
 }
