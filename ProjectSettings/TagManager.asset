@@ -8,6 +8,7 @@ TagManager:
   - Spikes
   - PlayerTag
   - RunZone
+  - CheckPoint
   layers:
   - Default
   - TransparentFX
