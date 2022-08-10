@@ -1,5 +1,4 @@
-﻿using System;
-using Model.PlayerComponents;
+﻿using Model.PlayerComponents;
 using UnityEngine;
 
 namespace Model
