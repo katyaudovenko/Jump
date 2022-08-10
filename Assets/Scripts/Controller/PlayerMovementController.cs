@@ -1,4 +1,5 @@
-﻿using Model.PlayerComponents;
+﻿using System;
+using Model.PlayerComponents;
 using UnityEngine;
 
 namespace Controller
@@ -6,11 +7,16 @@ namespace Controller
     public class PlayerMovementController : MonoBehaviour
     {
         private const string SlidingZoneTag = "SlidingZone";
-        
-        private PlayerJump _jumpComponent;
+        private const string RunZone = "RunZone";
 
-        private void Awake() => 
+        private PlayerJump _jumpComponent;
+        private PlayerRun _runComponent; 
+
+        private void Awake()
+        {
             _jumpComponent = GetComponent<PlayerJump>();
+            _runComponent = GetComponent<PlayerRun>();
+        }
 
         private void Update()
         {
@@ -22,7 +28,17 @@ namespace Controller
         {
             if (col.gameObject.tag.Equals(SlidingZoneTag)) 
                 _jumpComponent.StopJump();
+
+            
         }
 
+        private void OnCollisionStay2D(Collision2D collision)
+        {
+            if (collision.gameObject.tag.Equals(RunZone))
+            {
+                _jumpComponent.StopJump();
+                _runComponent.Run();
+            }
+        }
     }
 }

@@ -8,6 +8,7 @@
         public override void Enter()
         {
             base.Enter();
+            GlobalEventManager.OnStartGame();
         }
 
         public override void Exit()
