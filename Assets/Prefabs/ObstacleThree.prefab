@@ -72,6 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4926037999325191157}
   - component: {fileID: 7391060635828270113}
+  - component: {fileID: 4501996555374307805}
   m_Layer: 0
   m_Name: GrassPlatform 4
   m_TagString: RunZone
@@ -121,6 +122,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.1344552, y: 0.045914084}
   m_EdgeRadius: 0
+--- !u!114 &4501996555374307805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418022358039315301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a0b6838becb4300b1ae337cb066a11a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1160440691335204769
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,6 +206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4477665443931716025}
   - component: {fileID: 7116234016343037201}
+  - component: {fileID: 3239397167028323502}
   m_Layer: 0
   m_Name: GrassPlatform 5
   m_TagString: RunZone
@@ -242,6 +256,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.1344552, y: 0.045914084}
   m_EdgeRadius: 0
+--- !u!114 &3239397167028323502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590501678636016887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a0b6838becb4300b1ae337cb066a11a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1636204480976951602
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,6 +362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5283812759335168455}
   - component: {fileID: 1092992318631243576}
+  - component: {fileID: 1543467587136163995}
   m_Layer: 0
   m_Name: GrassPlatform 3
   m_TagString: RunZone
@@ -385,6 +412,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.1344552, y: 0.045914084}
   m_EdgeRadius: 0
+--- !u!114 &1543467587136163995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2410472132597562392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a0b6838becb4300b1ae337cb066a11a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2664493569046175638
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,6 +576,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2664493569760399988}
   - component: {fileID: 3741409948807737546}
+  - component: {fileID: 7944640068480412977}
   m_Layer: 0
   m_Name: GrassPlatform 1
   m_TagString: RunZone
@@ -586,6 +626,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.1395926, y: 0.045914084}
   m_EdgeRadius: 0
+--- !u!114 &7944640068480412977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2664493569760399991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a0b6838becb4300b1ae337cb066a11a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2664493570001373134
 GameObject:
   m_ObjectHideFlags: 0
@@ -1343,6 +1395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1752691560627975961}
   - component: {fileID: 2377375075944998126}
+  - component: {fileID: 2211786865286027095}
   m_Layer: 0
   m_Name: GrassPlatform 2
   m_TagString: RunZone
@@ -1392,6 +1445,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.1344552, y: 0.045914084}
   m_EdgeRadius: 0
+--- !u!114 &2211786865286027095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5439050248638451334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a0b6838becb4300b1ae337cb066a11a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5596087937296307880
 GameObject:
   m_ObjectHideFlags: 0

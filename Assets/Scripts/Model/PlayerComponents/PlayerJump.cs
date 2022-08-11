@@ -34,12 +34,17 @@ namespace Model.PlayerComponents
 
         public void StopJump()
         {
-            _inJump = false;
-            _isDoubleJump = false;
+            ResetJump();
             
             _rigidbody2D.velocity = Vector2.zero;
             _rigidbody2D.gravityScale = slidingGravityScale;
             transform.Rotate(0, 180, 0);
+        }
+
+        public void ResetJump()
+        {
+            _inJump = false;
+            _isDoubleJump = false;
         }
 
         private void JumpInDirection()
