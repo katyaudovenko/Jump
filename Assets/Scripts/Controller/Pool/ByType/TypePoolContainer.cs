@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Controller.Pool
+namespace Controller.Pool.ByType
 {
-    public class PoolContainer : MonoBehaviour
+    public class TypePoolContainer : MonoBehaviour
     {
-        [SerializeField] private List<PoolInfo> poolsInfo;
+        [SerializeField] private TypePoolInfoConfig config;
 
         private readonly Dictionary<Type, PoolObjects> _poolsMap = new Dictionary<Type, PoolObjects>();
 
         public void CreatePools()
         {
-            foreach (var poolInfo in poolsInfo)
+            foreach (var poolInfo in config.typePoolsInfo)
             {
                 var type = poolInfo.prefab.Behaviour.GetType();
                 var pool = new PoolObjects(poolInfo.prefab, CreateContainer(type.Name), poolInfo.count);

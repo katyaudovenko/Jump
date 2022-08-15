@@ -1,10 +1,11 @@
 ﻿using System;
 
-namespace Controller.Pool
+namespace Controller.Pool.ByKey
 {
     [Serializable]
-    public class PoolInfo
+    public class KeyPoolInfo
     {
+        public string key;
         public int count;
         public PoolObject prefab;
     }
