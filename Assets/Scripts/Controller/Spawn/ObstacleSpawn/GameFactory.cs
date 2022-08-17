@@ -23,6 +23,7 @@ namespace Controller.Spawn.ObstacleSpawn
             var prefab = _poolContainer.GetFreeElement<T>(key);
             prefab.transform.position = position;
             prefab.transform.SetParent(transform);
+            prefab.SetupPool(key, _poolContainer);
             return prefab;
         }
     }
