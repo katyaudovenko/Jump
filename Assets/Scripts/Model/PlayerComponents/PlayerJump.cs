@@ -37,8 +37,14 @@ namespace Model.PlayerComponents
             ResetJump();
             
             _rigidbody2D.velocity = Vector2.zero;
-            _rigidbody2D.gravityScale = slidingGravityScale;
+            _rigidbody2D.gravityScale = 0;
             transform.Rotate(0, 180, 0);
+        }
+
+        public void StopJumpOnSlidingZone()
+        {
+            StopJump();
+            _rigidbody2D.gravityScale = slidingGravityScale;
         }
 
         public void ResetJump()
