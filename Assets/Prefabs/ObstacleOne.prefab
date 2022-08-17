@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2958822705565328015}
   - component: {fileID: 7441942368615631467}
+  - component: {fileID: -2899615737766973938}
   m_Layer: 0
   m_Name: ObstacleOne
   m_TagString: Untagged
@@ -50,6 +51,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b89298e82380407388444dd7a6cf1561, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-2899615737766973938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2958822705565328008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2727bfafa040c2a9b58b6babe9108d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1906066410614388637

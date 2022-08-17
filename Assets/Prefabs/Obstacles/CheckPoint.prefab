@@ -210,7 +210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2986347712017534769}
   - component: {fileID: 7299803248743086358}
-  - component: {fileID: 6295037171540695465}
+  - component: {fileID: 3688496989171684973}
   m_Layer: 0
   m_Name: CheckPoint
   m_TagString: CheckPoint
@@ -226,8 +226,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8636922538105328620}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.87, z: 0}
-  m_LocalScale: {x: 1.3, y: 1.3, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4380178475507355260}
@@ -251,7 +251,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0.00004325062, y: 0.0004246235}
   m_Size: {x: 0.21999376, y: 2.1329808}
   m_Direction: 0
---- !u!114 &6295037171540695465
+--- !u!114 &3688496989171684973
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -260,6 +260,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8636922538105328620}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b89298e82380407388444dd7a6cf1561, type: 3}
+  m_Script: {fileID: 11500000, guid: 53b7d06e8a474578b4db4d76047f5ec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

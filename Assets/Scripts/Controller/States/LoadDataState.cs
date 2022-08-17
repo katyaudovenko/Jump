@@ -1,6 +1,4 @@
-﻿using Model.Services.ServiceLocator;
-
-namespace Controller.States
+﻿namespace Controller.States
 {
     public class LoadDataState : State
     {
@@ -10,11 +8,13 @@ namespace Controller.States
         public override void Enter()
         {
             base.Enter();
+            LoadData();
+            StateMachine.ChangeState<GameLoopState>();
         }
 
-        public override void Exit()
+        private void LoadData()
         {
-            base.Exit();
+            
         }
     }
 }

@@ -12,4 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc4d975af2a41a3b1635047cf5aa8fd, type: 3}
   m_Name: KeyPoolInfoConfig
   m_EditorClassIdentifier: 
-  keyPoolsInfo: []
+  keyPoolsInfo:
+  - key: StartObstacle
+    count: 1
+    prefab: {fileID: 7441942368615631467, guid: 3acdf9d2d8827d54eac7704b7e97e3d2, type: 3}
+  - key: ObstacleTwo
+    count: 1
+    prefab: {fileID: 205884357856042822, guid: e24cee4228d14a842a6753f034b06443, type: 3}
+  - key: RunnerObstacle
+    count: 1
+    prefab: {fileID: 2664493569046175639, guid: 82542ad0aa52bae4f8d8dea15baf0d8c, type: 3}
+  - key: StartObstacle
+    count: 1
+    prefab: {fileID: 501866027972166258, guid: 5976e0cb9fecb0244b6ecdc84feb93e5, type: 3}

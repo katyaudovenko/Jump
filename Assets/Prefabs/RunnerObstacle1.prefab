@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2664493569046175636}
   - component: {fileID: 2664493569046175639}
+  - component: {fileID: 459911263488029801}
   m_Layer: 0
-  m_Name: ObstacleThree
+  m_Name: RunnerObstacle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,6 +55,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b89298e82380407388444dd7a6cf1561, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &459911263488029801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2664493569046175638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2727bfafa040c2a9b58b6babe9108d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &77873407091392870

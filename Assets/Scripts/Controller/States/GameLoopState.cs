@@ -10,10 +10,5 @@
             base.Enter();
             GlobalEventManager.OnStartGame();
         }
-
-        public override void Exit()
-        {
-            base.Exit();
-        }
     }
 }

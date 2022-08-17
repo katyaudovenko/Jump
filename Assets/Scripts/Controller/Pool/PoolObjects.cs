@@ -30,7 +30,7 @@ namespace Controller.Pool
         private PoolObject CreatePoolElement()
         {
             var createdElement = Object.Instantiate(_prefab, _container);
-            createdElement.gameObject.SetActive(true);
+            createdElement.gameObject.SetActive(false);
             createdElement.Behaviour.OnInitialize();
             return createdElement;
         }
