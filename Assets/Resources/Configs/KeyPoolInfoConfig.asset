@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: KeyPoolInfoConfig
   m_EditorClassIdentifier: 
   keyPoolsInfo:
-  - key: StartObstacle
+  - key: BaseObstacle1
     count: 1
     prefab: {fileID: 7441942368615631467, guid: 3acdf9d2d8827d54eac7704b7e97e3d2, type: 3}
-  - key: ObstacleTwo
+  - key: BaseObstacle2
     count: 1
     prefab: {fileID: 205884357856042822, guid: e24cee4228d14a842a6753f034b06443, type: 3}
-  - key: RunnerObstacle
+  - key: BaseObstacle3
     count: 1
     prefab: {fileID: 2664493569046175639, guid: 82542ad0aa52bae4f8d8dea15baf0d8c, type: 3}
-  - key: StartObstacle
+  - key: StartObstacle1
     count: 1
     prefab: {fileID: 501866027972166258, guid: 5976e0cb9fecb0244b6ecdc84feb93e5, type: 3}
