@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2652262711121381722}
   - component: {fileID: 7177436092408103783}
+  - component: {fileID: -7037571872435628258}
   - component: {fileID: 9170795514281545221}
   m_Layer: 7
   m_Name: RunZone
@@ -144,6 +145,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.0700803, y: 0.06367932}
   m_EdgeRadius: 0
+--- !u!114 &-7037571872435628258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8626610415544761401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f5212ac8598432786a8c2f741d2804f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &9170795514281545221
 MonoBehaviour:
   m_ObjectHideFlags: 0

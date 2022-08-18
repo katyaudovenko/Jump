@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Libs.Components;
+using UnityEngine;
 
 namespace Model.PlayerComponents
 {
@@ -6,14 +7,13 @@ namespace Model.PlayerComponents
     {
         [SerializeField] private float jumpForce;
         [SerializeField] private float jumpingGravity;
-        [SerializeField] private float slidingGravityScale;
 
-        private Rigidbody2D _rigidbody2D;
+        private RigidbodyComponent _rigidbody;
         private bool _inJump;
         private bool _isDoubleJump;
         
         private void Awake() => 
-            _rigidbody2D = GetComponent<Rigidbody2D>();
+            _rigidbody = GetComponent<RigidbodyComponent>();
 
         public void Jump()
         {
@@ -26,37 +26,39 @@ namespace Model.PlayerComponents
 
             if (!_isDoubleJump)
             {
-                transform.Rotate(0, 180, 0);
+                Flip();
                 JumpInDirection();
                 _isDoubleJump = true;
             }
         }
 
-        public void StopJump()
-        {
-            ResetJump();
-            
-            _rigidbody2D.velocity = Vector2.zero;
-            _rigidbody2D.gravityScale = 0;
-            transform.Rotate(0, 180, 0);
-        }
-
-        public void StopJumpOnSlidingZone()
+        public void OnIntersect(float slidingGravity)
         {
             StopJump();
-            _rigidbody2D.gravityScale = slidingGravityScale;
+            _rigidbody.ChangeGravity(slidingGravity);
         }
 
-        public void ResetJump()
+        public void ResetJumpState()
         {
             _inJump = false;
             _isDoubleJump = false;
         }
 
+        private void StopJump()
+        {
+            Flip();
+            ResetJumpState();
+
+            _rigidbody.ResetVelocity();
+        }
+
+        private void Flip() => 
+            transform.Rotate(0, 180, 0);
+
         private void JumpInDirection()
         {
-            _rigidbody2D.velocity = (transform.right + Vector3.up).normalized * jumpForce;
-            _rigidbody2D.gravityScale = jumpingGravity;
+            _rigidbody.ChangeVelocity((transform.right + Vector3.up).normalized * jumpForce);
+            _rigidbody.ChangeGravity(jumpingGravity);
         }
     }
 }

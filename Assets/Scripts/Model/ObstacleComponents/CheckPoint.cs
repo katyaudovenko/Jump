@@ -1,5 +1,5 @@
 ﻿using System;
-using Model.PlayerComponents;
+using Libs.Components;
 using UnityEngine;
 
 namespace Model.ObstacleComponents
@@ -8,13 +8,18 @@ namespace Model.ObstacleComponents
     {
         public event Action OnCheckPoint;
 
-        private PlayerJump _jumpComponent;
-        
-        private void OnCollisionEnter2D(Collision2D col)
-        {
+        private CollisionComponent _collisionComponent;
+
+        private void Awake() => 
+            _collisionComponent = GetComponent<CollisionComponent>();
+
+        private void OnEnable() => 
+            _collisionComponent.OnCollisionEnter += CollisionEnter;
+
+        private void OnDisable() => 
+            _collisionComponent.OnCollisionEnter -= CollisionEnter;
+
+        private void CollisionEnter(Collision2D collision2D) => 
             OnCheckPoint?.Invoke();
-            _jumpComponent = col.gameObject.GetComponent<PlayerJump>();
-            _jumpComponent.StopJump();
-        }
     }
 }

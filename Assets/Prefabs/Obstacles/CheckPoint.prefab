@@ -241,6 +241,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2986347712017534769}
   - component: {fileID: 7299803248743086358}
+  - component: {fileID: 7780084651294941868}
+  - component: {fileID: 3052848931330548513}
   - component: {fileID: 6141973428522992217}
   m_Layer: 10
   m_Name: CheckPoint
@@ -283,6 +285,31 @@ CapsuleCollider2D:
   m_Offset: {x: 0.00004325062, y: 0.0004246235}
   m_Size: {x: 0.21999376, y: 2.1329808}
   m_Direction: 0
+--- !u!114 &7780084651294941868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8636922538105328620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f5212ac8598432786a8c2f741d2804f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3052848931330548513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8636922538105328620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53b7d06e8a474578b4db4d76047f5ec1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slidingGravity: 0
 --- !u!114 &6141973428522992217
 MonoBehaviour:
   m_ObjectHideFlags: 0

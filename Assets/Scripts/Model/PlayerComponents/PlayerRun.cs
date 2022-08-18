@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Libs.Components;
+using UnityEngine;
 
 namespace Model.PlayerComponents
 {
@@ -6,19 +7,14 @@ namespace Model.PlayerComponents
     {
         [SerializeField] private float speedRun;
 
-        private Rigidbody2D _rigidbody2D;
-        private PlayerJump _playerJump;
+        private RigidbodyComponent _rigidbody;
 
-        private void Awake()
-        {
-            _rigidbody2D = GetComponent<Rigidbody2D>();
-            _playerJump = GetComponent<PlayerJump>();
-        }
+        
+        
+        private void Awake() => 
+            _rigidbody = GetComponent<RigidbodyComponent>();
 
-        public void Run()
-        {
-            _playerJump.ResetJump();
-            _rigidbody2D.velocity = transform.right * speedRun;
-        }
+        public void Run() => 
+            _rigidbody.ChangeVelocity(transform.right * speedRun);
     }
 }

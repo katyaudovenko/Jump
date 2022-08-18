@@ -1,16 +1,28 @@
-﻿using Model.PlayerComponents;
+﻿using Libs.Components;
+using Model.PlayerComponents;
 using UnityEngine;
 
 namespace Model.ObstacleComponents
 {
     public class SlidingZone : MonoBehaviour
     {
-        private PlayerJump _jumpComponent;
+        [SerializeField] private float slidingGravity = 0.05f;
+
+        private CollisionComponent _collisionComponent;
+
+        private void Awake() => 
+            _collisionComponent = GetComponent<CollisionComponent>();
+
+        private void OnEnable() => 
+            _collisionComponent.OnCollisionEnter += CollisionEnter;
+
+        private void OnDisable() => 
+            _collisionComponent.OnCollisionEnter -= CollisionEnter;
         
-        private void OnCollisionEnter2D(Collision2D collision)
+        private void CollisionEnter(Collision2D collision)
         {
-            _jumpComponent = collision.gameObject.GetComponent<PlayerJump>();
-            _jumpComponent.StopJumpOnSlidingZone();
+            var jumpComponent = collision.gameObject.GetComponent<PlayerJump>();
+            jumpComponent.OnIntersect(slidingGravity);
         }
     }
 }
