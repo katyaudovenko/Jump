@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 329402205930958741}
   - component: {fileID: 2189460156904024499}
   - component: {fileID: 38905969121291590}
+  - component: {fileID: 6988189453667868512}
   m_Layer: 8
   m_Name: LongSlidingPlatform
   m_TagString: Untagged
@@ -231,3 +232,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53b7d06e8a474578b4db4d76047f5ec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6988189453667868512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7285556684916483170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74e6eaba7492421b8c32fbf7554f8265, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addingScore: 1

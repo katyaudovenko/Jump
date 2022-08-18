@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 6290501168828793565}
   - component: {fileID: 9133700761012491275}
   - component: {fileID: 1544575062018418703}
+  - component: {fileID: -6882983320739150237}
   m_Layer: 8
   m_Name: SlidingZone
   m_TagString: SlidingZone
@@ -146,3 +147,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53b7d06e8a474578b4db4d76047f5ec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6882983320739150237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5339003520813948373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74e6eaba7492421b8c32fbf7554f8265, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addingScore: 1
+  isOneSizePlatform: 1
