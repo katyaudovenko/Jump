@@ -2,6 +2,7 @@ using System;
 using Controller.Pool;
 using Controller.Pool.ByKey;
 using Model;
+using Model.ObstacleComponents;
 using UnityEngine;
 
 namespace Controller.Spawn.ObstacleSpawn

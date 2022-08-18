@@ -1,7 +1,7 @@
 ﻿using Model.PlayerComponents;
 using UnityEngine;
 
-namespace Model
+namespace Model.ObstacleComponents
 {
     public class SlidingZone : MonoBehaviour
     {

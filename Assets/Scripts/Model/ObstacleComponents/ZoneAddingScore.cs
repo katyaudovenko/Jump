@@ -2,7 +2,7 @@
 using Model.Services.ServiceLocator;
 using UnityEngine;
 
-namespace Model
+namespace Model.ObstacleComponents
 {
     public class ZoneAddingScore : MonoBehaviour
     {
@@ -15,7 +15,7 @@ namespace Model
         private void Awake() => 
             _scoreService = ServiceLocator.Instance.GetService<ScoreService>();
 
-        private void OnCollisionEnter2D(Collision2D collision)
+        private void OnCollisionEnter2D()
         {
             if (!_isDoubleEnterOnPlatform && isOneSizePlatform)
             {
