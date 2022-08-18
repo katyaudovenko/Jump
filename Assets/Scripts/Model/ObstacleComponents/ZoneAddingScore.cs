@@ -1,4 +1,5 @@
-﻿using Model.Services;
+﻿using Libs.Components;
+using Model.Services;
 using Model.Services.ServiceLocator;
 using UnityEngine;
 
@@ -7,24 +8,34 @@ namespace Model.ObstacleComponents
     public class ZoneAddingScore : MonoBehaviour
     {
         [SerializeField] private int addingScore;
-        [SerializeField] private bool isOneSizePlatform;
+        [SerializeField] private int maximumScore;
         
         private ScoreService _scoreService;
-        private bool _isDoubleEnterOnPlatform;
+        private CollisionComponent _collisionComponent;
+        
+        private int _platformScore;
 
-        private void Awake() => 
-            _scoreService = ServiceLocator.Instance.GetService<ScoreService>();
-
-        private void OnCollisionEnter2D()
+        private void Awake()
         {
-            if (!_isDoubleEnterOnPlatform && isOneSizePlatform)
-            {
-                _scoreService.AddScore(addingScore);
-                _isDoubleEnterOnPlatform = true;
-            }
-            if(!isOneSizePlatform) 
+            _scoreService = ServiceLocator.Instance.GetService<ScoreService>();
+            _collisionComponent = GetComponent<CollisionComponent>();
+        }
+
+        private void OnEnable()
+        {
+            _platformScore = 0;
+
+            _collisionComponent.OnCollisionEnter += CollisionEnter;
+        }
+
+        private void OnDisable() => _collisionComponent.OnCollisionEnter -= CollisionEnter;
+
+        private void CollisionEnter(Collision2D collision2D)
+        {
+            _platformScore++;
+            
+            if (_platformScore <= maximumScore) 
                 _scoreService.AddScore(addingScore);
         }
-        
     }
 }

@@ -244,6 +244,7 @@ GameObject:
   - component: {fileID: 7780084651294941868}
   - component: {fileID: 3052848931330548513}
   - component: {fileID: 6141973428522992217}
+  - component: {fileID: -8104173729211074197}
   m_Layer: 10
   m_Name: CheckPoint
   m_TagString: CheckPoint
@@ -322,3 +323,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b26422741b7429b82405ab594cb5177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8104173729211074197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8636922538105328620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74e6eaba7492421b8c32fbf7554f8265, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addingScore: 1
+  maximumScore: 1

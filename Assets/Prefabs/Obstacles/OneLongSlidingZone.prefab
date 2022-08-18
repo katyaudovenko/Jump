@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   addingScore: 1
-  isOneSizePlatform: 0
+  maximumScore: 2
 --- !u!1 &2059172995901847067
 GameObject:
   m_ObjectHideFlags: 0
