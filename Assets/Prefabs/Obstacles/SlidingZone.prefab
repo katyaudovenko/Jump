@@ -174,4 +174,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   addingScore: 1
-  isOneSizePlatform: 1
+  maximumScore: 1

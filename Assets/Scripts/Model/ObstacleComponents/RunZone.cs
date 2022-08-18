@@ -7,6 +7,10 @@ namespace Model.ObstacleComponents
     public class RunZone : MonoBehaviour
     {
         private CollisionComponent _collisionComponent;
+        
+        private Collision2D _playerCollision;
+        private PlayerRun _runComponent;
+        private PlayerJump _jumpComponent;
 
         private void Awake() =>
             _collisionComponent = GetComponent<CollisionComponent>();
@@ -19,11 +23,15 @@ namespace Model.ObstacleComponents
 
         private void CollisionEnter(Collision2D collision)
         {
-            var runComponent = collision.gameObject.GetComponent<PlayerRun>();
-            var jumpComponent = collision.gameObject.GetComponent<PlayerJump>();
+            if(_playerCollision != collision)
+            {
+                _runComponent = collision.gameObject.GetComponent<PlayerRun>();
+                _jumpComponent = collision.gameObject.GetComponent<PlayerJump>();
+                _playerCollision = collision;
+            }
             
-            jumpComponent.ResetJumpState();
-            runComponent.Run();
+            _jumpComponent.ResetJumpState();
+            _runComponent.Run();
         }
     }
 }

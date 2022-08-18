@@ -9,6 +9,8 @@ namespace Model.ObstacleComponents
         [SerializeField] private float slidingGravity = 0.05f;
 
         private CollisionComponent _collisionComponent;
+        private PlayerJump _jumpComponent;
+        private Collision2D _playerCollision;
 
         private void Awake() => 
             _collisionComponent = GetComponent<CollisionComponent>();
@@ -21,8 +23,13 @@ namespace Model.ObstacleComponents
         
         private void CollisionEnter(Collision2D collision)
         {
-            var jumpComponent = collision.gameObject.GetComponent<PlayerJump>();
-            jumpComponent.OnIntersect(slidingGravity);
+            if(_playerCollision != collision)
+            {
+                _jumpComponent = collision.gameObject.GetComponent<PlayerJump>();
+                _playerCollision = collision;
+            }
+            
+            _jumpComponent.OnIntersect(slidingGravity);
         }
     }
 }
