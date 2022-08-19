@@ -8,6 +8,8 @@ namespace Infrastructure.StateMachine.States
 {
     public class RegisterState : State
     {
+        private const string StandaloneInputServiceName = "StandaloneInputService";
+
         public RegisterState(StateMachine stateMachine) : base(stateMachine) => 
             RegisterServices();
 
@@ -22,7 +24,14 @@ namespace Infrastructure.StateMachine.States
         {
             ServiceLocator.Instance.Register(new ObstaclesFactory());
             ServiceLocator.Instance.Register(new ScoreService());
-            ServiceLocator.Instance.Register<IInputService>(new StandaloneInputService());
+            ServiceLocator.Instance.Register(CreateInputService());
+        }
+
+        private IInputService CreateInputService()
+        {
+            var gameObject = new GameObject(StandaloneInputServiceName);
+            var service = gameObject.AddComponent<StandaloneInputService>();
+            return service;
         }
 
         private void InitializeServices()

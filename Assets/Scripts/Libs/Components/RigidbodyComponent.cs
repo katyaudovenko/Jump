@@ -16,6 +16,9 @@ namespace Libs.Components
         public void ChangeGravity(float gravity) => 
             _rigidbody2D.gravityScale = gravity;
 
+        public void IncreaseVelocity(Vector2 delta) => 
+            _rigidbody2D.velocity += delta;
+
         public void ResetVelocity() => 
             _rigidbody2D.velocity = Vector2.zero;
 

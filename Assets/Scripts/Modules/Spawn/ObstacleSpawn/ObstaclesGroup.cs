@@ -33,8 +33,11 @@ namespace Modules.Spawn.ObstacleSpawn
             checkPoint.OnCheckPoint += OnCheckPoint;
         }
 
-        public void OnReset() => 
+        public void OnReset()
+        {
             checkPoint.OnCheckPoint -= OnCheckPoint;
+            OnGroupPass = null;
+        }
 
         public void DestroyObstacle() => 
             _pool.ReturnElement(_obstacleKey, this);

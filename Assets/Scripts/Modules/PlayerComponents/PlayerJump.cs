@@ -1,19 +1,34 @@
-﻿using Libs.Components;
+﻿using Infrastructure.Services;
+using Libs.Components;
+using Modules.GameInput;
 using UnityEngine;
 
 namespace Modules.PlayerComponents
 {
     public class PlayerJump : MonoBehaviour
     {
+        private const float IncreasingValue = 0.1f;
+        
         [SerializeField] private float jumpForce;
         [SerializeField] private float jumpingGravity;
 
         private RigidbodyComponent _rigidbody;
+        private IInputService _inputService;
+        
         private bool _inJump;
         private bool _isDoubleJump;
         
-        private void Awake() => 
+        private void Awake()
+        {
             _rigidbody = GetComponent<RigidbodyComponent>();
+            _inputService = ServiceLocator.Instance.GetService<IInputService>();
+        }
+
+        private void OnEnable() => 
+            _inputService.OnHighJumpHandler += HighJump;
+
+        private void OnDisable() => 
+            _inputService.OnHighJumpHandler -= HighJump;
 
         public void Jump()
         {
@@ -42,6 +57,12 @@ namespace Modules.PlayerComponents
         {
             _inJump = false;
             _isDoubleJump = false;
+        }
+
+        private void HighJump()
+        {
+            if(_inJump) 
+                _rigidbody.IncreaseVelocity(Vector2.up * IncreasingValue);
         }
 
         private void StopJump()
