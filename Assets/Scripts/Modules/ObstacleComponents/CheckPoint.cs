@@ -2,7 +2,7 @@
 using Libs.Components;
 using UnityEngine;
 
-namespace View.ObstacleComponents
+namespace Modules.ObstacleComponents
 {
     public class CheckPoint : MonoBehaviour
     {

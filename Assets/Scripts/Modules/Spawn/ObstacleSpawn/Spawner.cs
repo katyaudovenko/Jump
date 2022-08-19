@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Infrastructure.Pool.ByKey;
-using Infrastructure.Services.ServiceLocator;
+using Infrastructure.Services;
 using UnityEngine;
 
 namespace Modules.Spawn.ObstacleSpawn
@@ -13,13 +13,14 @@ namespace Modules.Spawn.ObstacleSpawn
 
         [SerializeField] private KeyPoolInfoConfig keyPoolInfoConfig;
 
-        private GameFactory _gameFactory;
-        private ObstaclesGroup _lastSpawnedObstacle;
         private readonly Queue<ObstaclesGroup> _obstacles = new Queue<ObstaclesGroup>();
+        
+        private ObstaclesFactory _obstaclesFactory;
+        private ObstaclesGroup _lastSpawnedObstacle;
 
         private void Awake()
         {
-            _gameFactory = ServiceLocator.Instance.GetService<GameFactory>();
+            _obstaclesFactory = ServiceLocator.Instance.GetService<ObstaclesFactory>();
             
             SpawnStartObstacle();
             SpawnNextObstacle(_lastSpawnedObstacle.EndPoint);
@@ -60,7 +61,6 @@ namespace Modules.Spawn.ObstacleSpawn
         {
             var baseObstacles = keyPoolInfoConfig.keyPoolsInfo.
                 FindAll(k => k.key.Contains(substringKey));
-
             var obstacleIndex = Random.Range(0, baseObstacles.Count);
             var obstacleKey = baseObstacles[obstacleIndex].key;
             var obstacle = GenerateObstacle(obstacleKey, position);
@@ -69,6 +69,6 @@ namespace Modules.Spawn.ObstacleSpawn
         }
 
         private ObstaclesGroup GenerateObstacle(string key, Vector3 position) => 
-            _gameFactory.CreateObstacle<ObstaclesGroup>(key, transform, position);
+            _obstaclesFactory.CreateObstacle<ObstaclesGroup>(key, transform, position);
     }
 }

@@ -1,7 +1,7 @@
 ﻿using Libs.Components;
 using UnityEngine;
 
-namespace View.PlayerComponents
+namespace Modules.PlayerComponents
 {
     public class PlayerRun : MonoBehaviour
     {

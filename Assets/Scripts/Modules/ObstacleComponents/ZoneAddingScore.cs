@@ -1,9 +1,9 @@
 ﻿using Infrastructure.Services;
-using Infrastructure.Services.ServiceLocator;
 using Libs.Components;
+using Modules.Score;
 using UnityEngine;
 
-namespace View.ObstacleComponents
+namespace Modules.ObstacleComponents
 {
     public class ZoneAddingScore : MonoBehaviour
     {

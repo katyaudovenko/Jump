@@ -1,7 +1,7 @@
 ﻿using System;
-using Infrastructure.Services.ServiceLocator;
+using Infrastructure.Services;
 
-namespace Infrastructure.Services
+namespace Modules.Score
 {
     public class ScoreService : IService
     {

@@ -1,8 +1,8 @@
 using System;
 using Infrastructure.Pool;
 using Infrastructure.Pool.ByKey;
+using Modules.ObstacleComponents;
 using UnityEngine;
-using View.ObstacleComponents;
 
 namespace Modules.Spawn.ObstacleSpawn
 {
@@ -18,28 +18,26 @@ namespace Modules.Spawn.ObstacleSpawn
         private bool _isGroupPass;
 
         public Transform EndPoint => endPoint;
+        
         public void SetupPool(string obstacleKey, KeyPoolContainer pool)
         {
             _obstacleKey = obstacleKey;
             _pool = pool;
         }
 
-        public void OnInitialize()
-        {
-            checkPoint.OnCheckPoint += OnCheckPoint;
-        }
+        public void OnInitialize() {}
 
         public void OnSetup()
         {
             _isGroupPass = false;
+            checkPoint.OnCheckPoint += OnCheckPoint;
         }
 
-        public void OnReset() { }
+        public void OnReset() => 
+            checkPoint.OnCheckPoint -= OnCheckPoint;
 
-        public void DestroyObstacle()
-        {
+        public void DestroyObstacle() => 
             _pool.ReturnElement(_obstacleKey, this);
-        }
 
         private void OnCheckPoint()
         {

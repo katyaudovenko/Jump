@@ -1,18 +1,18 @@
 ﻿using Libs.Components;
+using Modules.PlayerComponents;
 using UnityEngine;
-using View.PlayerComponents;
 
-namespace View.ObstacleComponents
+namespace Modules.ObstacleComponents
 {
-    public class SlidingZone : MonoBehaviour
+    public class RunZone : MonoBehaviour
     {
-        [SerializeField] private float slidingGravity = 0.05f;
-
         private CollisionComponent _collisionComponent;
-        private PlayerJump _jumpComponent;
+        
         private Collision2D _playerCollision;
+        private PlayerRun _runComponent;
+        private PlayerJump _jumpComponent;
 
-        private void Awake() => 
+        private void Awake() =>
             _collisionComponent = GetComponent<CollisionComponent>();
 
         private void OnEnable() => 
@@ -20,16 +20,18 @@ namespace View.ObstacleComponents
 
         private void OnDisable() => 
             _collisionComponent.OnCollisionEnter -= CollisionEnter;
-        
+
         private void CollisionEnter(Collision2D collision)
         {
             if(_playerCollision != collision)
             {
+                _runComponent = collision.gameObject.GetComponent<PlayerRun>();
                 _jumpComponent = collision.gameObject.GetComponent<PlayerJump>();
                 _playerCollision = collision;
             }
             
-            _jumpComponent.OnIntersect(slidingGravity);
+            _jumpComponent.ResetJumpState();
+            _runComponent.Run();
         }
     }
 }

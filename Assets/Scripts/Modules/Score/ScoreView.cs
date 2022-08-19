@@ -1,9 +1,8 @@
 ﻿using Infrastructure.Services;
-using Infrastructure.Services.ServiceLocator;
 using TMPro;
 using UnityEngine;
 
-namespace View.UIComponents
+namespace Modules.Score
 {
     public class ScoreView : MonoBehaviour
     {

@@ -1,12 +1,12 @@
 ﻿using Infrastructure.Pool.ByKey;
-using Infrastructure.Services.ServiceLocator;
+using Infrastructure.Services;
 using UnityEngine;
 
 namespace Modules.Spawn.ObstacleSpawn
 {
-    public class GameFactory : IService
+    public class ObstaclesFactory : IService
     {
-        private const string PoolContainerPath = "Prefabs/KeyPoolContainer";
+        private const string PoolContainerPath = "Prefabs/ObstaclesPoolContainer";
 
         private KeyPoolContainer _poolContainer;
 
@@ -16,8 +16,7 @@ namespace Modules.Spawn.ObstacleSpawn
             _poolContainer = Object.Instantiate(prefab);
             _poolContainer.CreatePools();
         }
-        
-        
+
         public T CreateObstacle<T>(string key,Transform transform, Vector3 position) where T : ObstaclesGroup
         {
             var prefab = _poolContainer.GetFreeElement<T>(key);

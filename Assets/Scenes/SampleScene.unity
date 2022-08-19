@@ -807,6 +807,7 @@ GameObject:
   - component: {fileID: 1584946327}
   - component: {fileID: 1584946329}
   - component: {fileID: 1584946328}
+  - component: {fileID: 1584946330}
   m_Layer: 5
   m_Name: ScoreView
   m_TagString: Untagged
@@ -931,6 +932,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584946326}
   m_CullTransparentMesh: 1
+--- !u!114 &1584946330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584946326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d5e642912a0448ba209fb306b738486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1732491845
 GameObject:
   m_ObjectHideFlags: 0
@@ -1228,6 +1241,7 @@ GameObject:
   - component: {fileID: 2109011768}
   - component: {fileID: 2109011766}
   - component: {fileID: 2109011763}
+  - component: {fileID: 2109011769}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -1297,9 +1311,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9702d5bd4f14b41a2a1a1c85137ceaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 10
-  jumpingGravity: 1.5
-  slidingGravityScale: 0.05
+  jumpForce: 12
+  jumpingGravity: 1.8
 --- !u!61 &2109011767
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1336,5 +1349,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d63ff3a67a34122ae940f6c3ff0c52b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2109011769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109011762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e21ac3ef43fa40ff996a9d2f69c1b12e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

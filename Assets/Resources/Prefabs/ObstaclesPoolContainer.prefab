@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6641612095898422181}
   - component: {fileID: 169154494122463373}
   m_Layer: 0
-  m_Name: KeyPoolContainer
+  m_Name: ObstaclesPoolContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
