@@ -7,8 +7,7 @@ namespace Modules.PlayerComponents
 {
     public class PlayerJump : MonoBehaviour
     {
-        private const float IncreasingValue = 0.1f;
-        
+        [SerializeField] private float increasingValue;
         [SerializeField] private float jumpForce;
         [SerializeField] private float jumpingGravity;
 
@@ -62,7 +61,7 @@ namespace Modules.PlayerComponents
         private void HighJump()
         {
             if(_inJump) 
-                _rigidbody.IncreaseVelocity(Vector2.up * IncreasingValue);
+                _rigidbody.IncreaseVelocity(Vector2.up * increasingValue);
         }
 
         private void StopJump()

@@ -6,6 +6,7 @@ namespace Modules.GameInput
     public class StandaloneInputService : MonoBehaviour, IInputService
     {
         private const float MaxTime = 0.25f;
+        private const float MinTime = 0.1f;
         public event Action OnHighJumpHandler;
         
         private bool _isJump;
@@ -38,11 +39,12 @@ namespace Modules.GameInput
             if (_isJump && Input.GetMouseButton(0))
             {
                 _time += Time.deltaTime;
-                OnHighJumpHandler?.Invoke();
-                if (_time > MaxTime)
-                {
+                
+                if(_time is >= MinTime and <= MaxTime)
+                    OnHighJumpHandler?.Invoke();
+                
+                if (_time > MaxTime) 
                     ResetHighJump();
-                }
 
                 return true;
             }
