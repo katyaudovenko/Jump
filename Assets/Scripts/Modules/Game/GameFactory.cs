@@ -18,13 +18,13 @@ namespace Modules.Game
             _poolContainer.CreatePools();
         }
 
-        public PlayerCommonComponent CreatePlayer(Transform transform, Vector3 position)
+        public Transform CreatePlayer(Transform transform, Vector3 position)
         {
-            var player = _poolContainer.GetFreeElement<PlayerCommonComponent>();
+            var player = _poolContainer.GetFreeElement<PlayerDestroyComponent>();
             player.transform.position = position;
-            player.transform.SetParent(transform);
+            player.transform.SetParent(transform, false);
             player.SetupPool(_poolContainer);
-            return player;
+            return player.transform;
         }
     }
 }

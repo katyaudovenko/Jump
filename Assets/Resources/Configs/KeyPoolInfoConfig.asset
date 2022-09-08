@@ -22,3 +22,9 @@ MonoBehaviour:
   - key: StartObstacle1
     count: 1
     prefab: {fileID: 501866027972166258, guid: 5976e0cb9fecb0244b6ecdc84feb93e5, type: 3}
+  - key: BaseObstacle3
+    count: 1
+    prefab: {fileID: 8628741816477809127, guid: 14135f31edaae5b439654cb9200b6306, type: 3}
+  - key: BaseObstacle4
+    count: 1
+    prefab: {fileID: 2664493569046175639, guid: 82542ad0aa52bae4f8d8dea15baf0d8c, type: 3}

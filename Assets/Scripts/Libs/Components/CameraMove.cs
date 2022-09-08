@@ -6,16 +6,16 @@ namespace Libs.Components
     {
         private const int CameraDepth = -10;
         
-        [SerializeField] private Transform playerTransform;
         [SerializeField] private float movingSpeed;
         [SerializeField] private Transform lowerBound;
-        
+
+        private Transform _playerTransform;
         private void Update()
         {
-            if (playerTransform != null)
+            if (_playerTransform != null)
             {
                 var minYCamera = Camera.main.orthographicSize + lowerBound.position.y;
-                var playerPosition = playerTransform.position;
+                var playerPosition = _playerTransform.position;
                 var target = new Vector3
                 {
                     x = playerPosition.x,
@@ -29,5 +29,8 @@ namespace Libs.Components
                 transform.position = cameraPosition;
             }
         }
+
+        public void SetPlayerTransform(Transform playerTransform) => 
+            _playerTransform = playerTransform;
     }
 }

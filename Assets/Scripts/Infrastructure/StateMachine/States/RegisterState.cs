@@ -1,4 +1,5 @@
 using Infrastructure.Services;
+using Modules.Game;
 using Modules.GameInput;
 using Modules.Score;
 using Modules.Spawn.ObstacleSpawn;
@@ -22,6 +23,7 @@ namespace Infrastructure.StateMachine.States
 
         private void RegisterServices()
         {
+            ServiceLocator.Instance.Register(new GameFactory());
             ServiceLocator.Instance.Register(new ObstaclesFactory());
             ServiceLocator.Instance.Register(new ScoreService());
             ServiceLocator.Instance.Register(CreateInputService());
@@ -36,6 +38,7 @@ namespace Infrastructure.StateMachine.States
 
         private void InitializeServices()
         {
+            ServiceLocator.Instance.GetService<GameFactory>().Initialize();
             ServiceLocator.Instance.GetService<ObstaclesFactory>().Initialize();
         }
     }
