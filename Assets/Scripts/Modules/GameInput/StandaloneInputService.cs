@@ -5,8 +5,8 @@ namespace Modules.GameInput
 {
     public class StandaloneInputService : MonoBehaviour, IInputService
     {
-        private const float MaxTime = 0.25f;
-        private const float MinTime = 0.1f;
+        private const float MaxTime = 0.19f;
+        private const float MinTime = 0.09f;
         public event Action OnHighJumpHandler;
         
         private bool _isJump;
@@ -18,7 +18,7 @@ namespace Modules.GameInput
         {
             if (PlayerInJump()) return;
 
-            if (PlayerInHighJump()) return;
+            PlayerInHighJump();
         
             PlayerStopJump();
         }
@@ -34,7 +34,7 @@ namespace Modules.GameInput
             return false;
         }
 
-        private bool PlayerInHighJump()
+        private void PlayerInHighJump()
         {
             if (_isJump && Input.GetMouseButton(0))
             {
@@ -45,11 +45,7 @@ namespace Modules.GameInput
                 
                 if (_time > MaxTime) 
                     ResetHighJump();
-
-                return true;
             }
-
-            return false;
         }
 
         private void PlayerStopJump()

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Modules.Spawn.ObstacleSpawn
 {
-    public class Spawner : MonoBehaviour
+    public class ObstaclesSpawner : MonoBehaviour
     {
         private const string StartObstacleKey = "StartObstacle";
         private const string BaseObstacleKey = "BaseObstacle";
