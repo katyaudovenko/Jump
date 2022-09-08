@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50a65b96a23d4495901847d86af8fc2c, type: 3}
   m_Name: TypePoolInfoConfig
   m_EditorClassIdentifier: 
-  typePoolsInfo: []
+  typePoolsInfo:
+  - count: 1
+    prefab: {fileID: 4152967862668112044, guid: 459e4cc948f419d4ba780a110c06c803, type: 3}

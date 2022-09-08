@@ -94,6 +94,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2733899418658157947}
   - component: {fileID: 8971923870906049976}
+  - component: {fileID: 4811379971769548828}
+  - component: {fileID: 6127729672932883526}
   m_Layer: 9
   m_Name: ShortSpikes
   m_TagString: Spikes
@@ -141,3 +143,27 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &4811379971769548828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8253775021120260006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f74ad507ad4987851f0dc27080a4fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6127729672932883526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8253775021120260006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f5212ac8598432786a8c2f741d2804f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
